@@ -9,7 +9,7 @@ IMAGE_NAME := new5tt/imagemagick
 # APP_VERSION，主安装包的默认版本
 APP_VERSION=7.1.1-46
 TIMESTAMP := $(shell date +%Y%m%d%H%M%S)
-TAG := $(IMAGE_NAME):$(APP_VERSION)-$(TIMESTAMP)
+TAG := $(IMAGE_NAME):$(APP_VERSION)
 LATEST_TAG := $(IMAGE_NAME):latest
 
 .PHONY: all
