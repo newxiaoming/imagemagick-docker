@@ -9,6 +9,10 @@ on:
         description: '要构建的目录路径'
         required: true
         default: 'rockylinux'
+      tag:
+        description: '镜像标签'
+        required: true
+        default: 'latest'
 
 # 环境变量
 env:
