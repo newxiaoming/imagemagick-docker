@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE typemap [
+  <!ELEMENT typemap (type)+>
+  <!ATTLIST typemap xmlns CDATA #FIXED ''>
+  <!ELEMENT type EMPTY>
+  <!ATTLIST type xmlns CDATA #FIXED '' encoding NMTOKEN #IMPLIED
+    family CDATA #REQUIRED format NMTOKEN #REQUIRED foundry NMTOKEN #REQUIRED
+    fullname CDATA #REQUIRED glyphs CDATA #REQUIRED metrics CDATA #REQUIRED
+    name NMTOKEN #REQUIRED stretch NMTOKEN #REQUIRED style NMTOKEN #REQUIRED
+    version CDATA #IMPLIED weight CDATA #REQUIRED>
+]>
+<!--
+  ImageMagick font configuration.
+-->
+<typemap>
+   <include file="type-ghostscript.xml" /> <include file="type-urw-base35.xml" /> <include file="type-urw-base35-type1.xml" /> <include file="type-windows.xml" />
+   <type
+     name="Microsoft YaHei"
+     fullname="Microsoft YaHei"
+     family="Microsoft YaHei"
+     style="Normal"
+     weight="400"
+     stretch="Normal"
+     format="truetype"
+     metrics="/usr/share/fonts/otherfonts/msyhbd.ttf"
+     glyphs="/usr/share/fonts/otherfonts/msyhbd.ttf"
+   />
+</typemap>
