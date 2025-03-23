@@ -57,8 +57,6 @@ jobs:
       
       # 使用Makefile构建Docker镜像
       - name: 构建Docker镜像
-        with:
-          context: ./${{ github.event.inputs.directory }}
         run: |
           # 根据您的Makefile调整命令
           # 例如，如果Makefile有一个build目标：
