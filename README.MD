@@ -18,3 +18,5 @@ help      - 帮助"
 2. 增加字体
 
 修改添加字体，字体文件需要放在`otherfonts`目录下，字体文件名需要和`config/type.xml`中字体名保持一致。
+
+备注：`ImageMagick.sh` 仅仅作为安装的一个手动脚本，已经融合进去在docker构建过程。
