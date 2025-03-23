@@ -31,7 +31,7 @@ RUN cd ${TMP_DIR} && \
     make install
 
 # 运行阶段
-FROM docker.1ms.run/rockylinux/rockylinux:9.5-ubi
+FROM rockylinux/rockylinux:9.5-ubi
 
 ARG BASE_DIR=/opt/websrv
 ENV TZ=Asia/Shanghai

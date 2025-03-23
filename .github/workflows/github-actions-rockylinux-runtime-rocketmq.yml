@@ -1,5 +1,5 @@
-name: RockyLinux imagemagick Docker
-description: 基于RockyLinux的imagemagick Docker镜像（makefile）
+name: RockyLinux imagemagick Docker（install rocketMQ cpp library）
+description: 基于RockyLinux的imagemagick Docker镜像，含安装rocketMQ cpp库（makefile）
 
 on:
   release:
@@ -18,7 +18,7 @@ on:
 # 环境变量
 env:
   # 设置Docker镜像名称
-  IMAGE_NAME: new5tt/imagemagick
+  IMAGE_NAME: new5tt/imagemagick-rocketmq
 
 jobs:
   build-and-push:
@@ -62,7 +62,7 @@ jobs:
         run: |
           echo "当前目录: $(pwd)"
           echo "执行make build命令..."
-          make build APP_VERSION=${{ env.APP_VERSION }}
+          make rocketmq APP_VERSION=${{ env.APP_VERSION }} IMAGE_NAME=${{ env.IMAGE_NAME }
       
       # 推送Docker镜像
       - name: 推送Docker镜像

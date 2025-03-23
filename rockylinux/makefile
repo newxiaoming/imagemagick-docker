@@ -24,10 +24,10 @@ build:
 
 .PHONY: rocketmq
 rocketmq:
-	@echo "构建ImageMagick Docker镜像附带安装rocketmq-client-cpp 2.2.0，tag=$(TAG)-rocketmq"
+	@echo "构建ImageMagick Docker镜像附带安装rocketmq-client-cpp 2.2.0，tag=$(TAG)"
 	docker build -t $(TAG)-rocketmq --build-arg APP_VERSION=$(APP_VERSION) -f Dockerfile.runtime.rocketmq-client-cpp .
-	docker tag $(TAG)-rocketmq $(LATEST_TAG)-rocketmq
-	@echo "同时生成latest版本: $(LATEST_TAG)-rocketmq"
+	docker tag $(TAG)-rocketmq $(LATEST_TAG)
+	@echo "同时生成latest版本: $(LATEST_TAG)"
 
 # Clean up
 .PHONY: clean
