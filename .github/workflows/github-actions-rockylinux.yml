@@ -57,9 +57,10 @@ jobs:
       
       # 使用Makefile构建Docker镜像
       - name: 构建Docker镜像
+        working-directory: ./rockylinux
         run: |
-          # 根据您的Makefile调整命令
-          # 例如，如果Makefile有一个build目标：
+          echo "当前目录: $(pwd)"
+          echo "执行make build命令..."
           make build APP_VERSION=${{ env.APP_VERSION }}
       
       # 推送Docker镜像
