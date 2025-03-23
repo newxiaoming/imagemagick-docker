@@ -62,7 +62,7 @@ jobs:
         run: |
           echo "当前目录: $(pwd)"
           echo "执行make build命令..."
-          make rocketmq APP_VERSION=${{ env.APP_VERSION }} IMAGE_NAME=${{ env.IMAGE_NAME }
+          make rocketmq APP_VERSION=${{ env.APP_VERSION }} IMAGE_NAME=${{ env.IMAGE_NAME }}
       
       # 推送Docker镜像
       - name: 推送Docker镜像
