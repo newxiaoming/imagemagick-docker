@@ -6,6 +6,17 @@
 
 1. 使用`make`命令即可构建镜像，makefile中定义了构建的镜像，`APP_VERSION`是ImageMagick的版本，`IMAGE_NAME`需要修改成你的镜像名称，修改`APP_VERSION`即可构建不同ImageMagick版本的镜像。
 
+构建只有imagemagick的镜像的命令示例：
+
+```
+make build IMAGE_NAME=new5tt/imagemagick APP_VERSION=7.1.1-46
+```
+
+2、构建附带有安装rocketmq-client-cpp镜像的命令示例：
+
+```
+make rocketmq IMAGE_NAME=new5tt/imagemagick-rocketmq APP_VERSION=7.1.1-46
+```
 make可用的命令
 
 ```
