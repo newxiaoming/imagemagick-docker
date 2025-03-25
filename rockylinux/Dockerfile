@@ -60,6 +60,7 @@ RUN chmod 644 /usr/share/fonts/otherfonts/* && \
     yum install -y fontconfig ghostscript freetype-devel libpng-devel libjpeg-devel python3.12 python3.12-pip && \
     ln -s -f /usr/bin/python3.12 /usr/bin/python3 && \
     ln -s -f /usr/bin/python3.12 /usr/bin/python && \
+    ln -s -f /usr/bin/pip3.12 /usr/bin/pip && \
     fc-cache -fv && \
     yum clean all && \
     rm -rf /var/cache/yum
