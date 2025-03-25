@@ -60,12 +60,12 @@ COPY ./config/* /usr/local/etc/ImageMagick-*/
 
 # 设置字体权限并更新字体缓存
 RUN chmod 644 /usr/share/fonts/otherfonts/* && \
-    yum install -y fontconfig ghostscript freetype-devel libpng-devel libjpeg-devel python3.12 python3.12-pip&& \
+    yum install -y fontconfig ghostscript freetype-devel libpng-devel libjpeg-devel python3.12 python3.12-pip gcc gcc-c++ make && \
     ln -s -f /usr/bin/python3.12 /usr/bin/python3 && \
     ln -s -f /usr/bin/python3.12 /usr/bin/python && \
     ln -s -f /usr/bin/pip3.12 /usr/bin/pip && \
     ln -s -f /usr/bin/pip3.12 /usr/bin/pip3 && \
-    mkdir -p /usr/local/lib/python3.12/site-packages && \
+    mkdir -p /usr/local/lib/python3.12/ && \
     ln -s /usr/lib/python3.12/site-packages/ /usr/local/lib/python3.12/site-packages/ && \
     fc-cache -fv && \
     yum clean all && \
